@@ -4,6 +4,10 @@ if GetLocale() ~= "esES" then return end
 
 ---@type LocaleStrings
 LOCALE_STRINGS = {
+    addon_loaded_message = "¡Núcleo de replicación de amigos activado! Consulte interfaz de control vía '/fot help' para parámetros operacionales",
+    addon_help_message = "GUÍA DE USUARIO APROBADA POR GNOMOS: Configure notificaciones con '/fot quiet' (MODO STEALTH) o '/fot noisy' (ENTUSIASMO MÁXIMO)",
+    quiet_mode_enabled_message = "¡MODO STEALTH ACTIVADO! Las operaciones de sincronización de amigos ahora funcionan en silencio. (Sistemas de detección social evadidos)",
+    noisy_mode_enabled_message = "¡ENTUSIASMO MÁXIMO ACTIVADO! ¡Todos los protocolos sociales operan ahora al 110%% de capacidad de notificaciones! (Armonización catastrófica de amigos inminente)",
     add_friend_message_template_1 = "¡%s ASIMILADO AL COLECTIVO! (Eficiencia de amistad +12,7%%)",
     add_friend_message_template_2 = "¡%s AÑADIDO A FUERZA AL ARRAY SOCIAL! (Cumplimiento: opcional)",
     add_friend_message_template_3 = "¡ALIANZA ESPONTÁNEA GENERADA CON %s! (No cuestionar)",

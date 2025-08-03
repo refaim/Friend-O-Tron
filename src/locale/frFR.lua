@@ -4,6 +4,10 @@ if GetLocale() ~= "frFR" then return end
 
 ---@type LocaleStrings
 LOCALE_STRINGS = {
+    addon_loaded_message = "Noyau de réplication d'amis engagé ! Consultez l'interface de contrôle via '/fot help' pour les paramètres opérationnels",
+    addon_help_message = "GUIDE UTILISATEUR APPROUVÉ PAR LES GNOMES : Configurez les notifications avec '/fot quiet' (MODE FURTIF) ou '/fot noisy' (ENTHOUSIASME MAXIMUM)",
+    quiet_mode_enabled_message = "MODE FURTIF ACTIVÉ ! Les opérations de synchronisation d'amis fonctionnent maintenant silencieusement. (Systèmes de détection sociale contournés)",
+    noisy_mode_enabled_message = "ENTHOUSIASME MAXIMUM ENGAGÉ ! Tous les protocoles sociaux opèrent maintenant à 110%% de capacité de notifications ! (Harmonisation catastrophique d'amis imminente)",
     add_friend_message_template_1 = "%s ASSIMILÉ DANS LE COLLECTIF ! (Efficacité d'amitié +12,7%%)",
     add_friend_message_template_2 = "AJOUT FORCÉ DE %s DANS L'ARRAY SOCIAL ! (Compliance : optionnelle)",
     add_friend_message_template_3 = "ALLIANCE SPONTANÉE GÉNÉRÉE AVEC %s ! (Ne pas questionner)",

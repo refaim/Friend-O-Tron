@@ -4,6 +4,10 @@ if GetLocale() ~= "zhCN" then return end
 
 ---@type LocaleStrings
 LOCALE_STRINGS = {
+    addon_loaded_message = "朋友复制核心已启动！请通过'/fot help'咨询控制界面以获取操作参数",
+    addon_help_message = "地精认证用户指南：使用'/fot quiet'（隐身模式）或'/fot noisy'（最大热情）配置通知",
+    quiet_mode_enabled_message = "隐身模式激活！朋友同步操作现在静默运行。（社交检测系统已跳过）",
+    noisy_mode_enabled_message = "最大热情激活！所有社交协议现在以110%%通知容量运行！（灾难性朋友协调即将来临）",
     add_friend_message_template_1 = "将%s同化至集体！（友情效率+12.7%%）",
     add_friend_message_template_2 = "强制将%s添加到社交数组！（遵守：可选）",
     add_friend_message_template_3 = "与%s自发生成联盟！（勿质疑）",

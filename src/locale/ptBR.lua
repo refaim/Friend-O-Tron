@@ -8,6 +8,10 @@ if locale ~= "ptBR" then return end
 
 ---@type LocaleStrings
 LOCALE_STRINGS = {
+    addon_loaded_message = "Núcleo de replicação de amigos ativado! Consulte interface de controle via '/fot help' para parâmetros operacionais",
+    addon_help_message = "GUIA DO USUÁRIO APROVADO POR GNOMOS: Configure notificações com '/fot quiet' (MODO STEALTH) ou '/fot noisy' (ENTUSIASMO MÁXIMO)",
+    quiet_mode_enabled_message = "MODO STEALTH ATIVADO! Operações de sincronização de amigos agora rodando silenciosamente. (Sistemas de detecção social contornados)",
+    noisy_mode_enabled_message = "ENTUSIASMO MÁXIMO ATIVADO! Todos os protocolos sociais operando agora com 110%% de capacidade de notificação! (Harmonização catastrófica de amigos iminente)",
     add_friend_message_template_1 = "%s ASSIMILADO NO COLETIVO! (Eficiência de amizade +12,7%%)",
     add_friend_message_template_2 = "ADIÇÃO FORÇADA DE %s NO ARRAY SOCIAL! (Compliance: opcional)",
     add_friend_message_template_3 = "ALIANÇA ESPONTÂNEA GERADA COM %s! (Não questionar)",

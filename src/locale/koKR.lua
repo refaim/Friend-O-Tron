@@ -4,6 +4,10 @@ if GetLocale() ~= "koKR" then return end
 
 ---@type LocaleStrings
 LOCALE_STRINGS = {
+    addon_loaded_message = "친구 복제 코어 활성화! 작동 매개변수는 '/fot help'를 통해 제어 인터페이스를 참조하세요",
+    addon_help_message = "노움 인증 사용자 가이드: '/fot quiet' (스텔스 모드) 또는 '/fot noisy' (최대 열정)로 알림 설정",
+    quiet_mode_enabled_message = "스텔스 모드 활성화! 친구 동기화 작업이 이제 조용히 실행됩니다. (사회적 탐지 시스템 우회)",
+    noisy_mode_enabled_message = "최대 열정 모드 활성화! 모든 사회적 프로토콜이 이제 110%% 알림 용량으로 작동합니다! (재액적 친구 조화 임박)",
     add_friend_message_template_1 = "%s를 집단에 흡수했습니다! (우정 효율성 +12.7%%)",
     add_friend_message_template_2 = "%s를 소셜 배열에 강제 추가! (준수: 선택사항)",
     add_friend_message_template_3 = "%s와 자발적 동맹 생성! (의문을 품지 마세요)",

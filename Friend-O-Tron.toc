@@ -3,7 +3,7 @@
 ## Notes: An experimental automated friend-syncing construct! May exhibit catastrophic enthusiasm.
 ## Author: Refaim
 ## Version: 1.0
-## SavedVariables: FriendOTronDatabase
+## SavedVariables: FriendOTronDatabase, FriendOTronSettings
 
 src\Environment.lua
 src\Database.lua

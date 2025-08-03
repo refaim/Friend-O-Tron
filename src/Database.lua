@@ -27,12 +27,13 @@ end
 
 ---@return FriendOTronSavedVariable
 function Database:_LoadSavedVariable()
+    local varName = "FriendOTronDatabase"
     ---@type FriendOTronSavedVariable
-    local var = getglobal("FriendOTronDatabase")
+    local var = getglobal(varName)
     if var == nil then
         var = {realmToEvents = {}}
         var.realmToEvents[GetRealmName()] = {}
-        setglobal("FriendOTronDatabase", var)
+        setglobal(varName, var)
     end
     return var
 end

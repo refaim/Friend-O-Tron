@@ -4,6 +4,10 @@ if GetLocale() ~= "deDE" then return end
 
 ---@type LocaleStrings
 LOCALE_STRINGS = {
+    addon_loaded_message = "Freund-Replikationskern aktiviert! Kontrollschnittstelle über '/fot help' für Betriebsparameter konsultieren",
+    addon_help_message = "GNOMISCH GEPRÜFTER BENUTZERHANDBUCH: Benachrichtigungen konfigurieren mit '/fot quiet' (STEALTH-MODUS) oder '/fot noisy' (MAXIMALER ENTHUSIASMUS)",
+    quiet_mode_enabled_message = "STEALTH-MODUS AKTIVIERT! Freund-Synchronisationsoperationen laufen jetzt lautlos. (Soziale Erkennungssysteme umgangen)",
+    noisy_mode_enabled_message = "MAXIMALER ENTHUSIASMUS AKTIVIERT! Alle sozialen Protokolle operieren jetzt mit 110%% Benachrichtigungskapazität! (Katastrophale Freund-Harmonisierung unmittelbar bevorstehend)",
     add_friend_message_template_1 = "%s IN DAS KOLLEKTIV ASSIMILIERT! (Freundschaftseffizienz +12,7%%)",
     add_friend_message_template_2 = "ZWANGSAUFNAHME VON %s IN SOZIALES ARRAY! (Compliance: optional)",
     add_friend_message_template_3 = "SPONTANE ALLIANZ MIT %s GENERIERT! (Nicht hinterfragen)",

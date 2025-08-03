@@ -1,6 +1,10 @@
 setfenv(1, FriendOTron)
 
 ---@shape LocaleStrings
+---@field addon_loaded_message string
+---@field addon_help_message string
+---@field quiet_mode_enabled_message string
+---@field noisy_mode_enabled_message string
 ---@field add_friend_message_template_1 string
 ---@field add_friend_message_template_2 string
 ---@field add_friend_message_template_3 string
@@ -22,6 +26,10 @@ setfenv(1, FriendOTron)
 ---@field friend_list_full_message string
 
 LOCALE_STRINGS = {
+    addon_loaded_message = "Friend-replication core engaged! Consult control interface via '/fot help' for operational parameters",
+    addon_help_message = "GNOME-APPROVED USER GUIDE: Configure notifications with '/fot quiet' (STEALTH MODE) or '/fot noisy' (MAXIMUM ENTHUSIASM)",
+    quiet_mode_enabled_message = "STEALTH MODE ACTIVATED! Friend-syncing operations now running silently. (Social detection systems bypassed)",
+    noisy_mode_enabled_message = "MAXIMUM ENTHUSIASM ENGAGED! All social protocols now operating at 110% notification capacity! (Catastrophic friend-harmonization imminent)",
     add_friend_message_template_1 = "ASSIMILATED %s INTO COLLECTIVE! (Friendship efficiency +12.7%%)",
     add_friend_message_template_2 = "FORCE-ADDED %s TO SOCIAL ARRAY! (Compliance: optional)",
     add_friend_message_template_3 = "SPONTANEOUSLY GENERATED NEW ALLIANCE WITH %s! (Do not question)",
