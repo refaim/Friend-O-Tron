@@ -1,0 +1,21 @@
+## Interface: 11200
+## Title: Friend-O-Tron
+## Notes: An experimental automated friend-syncing construct! May exhibit catastrophic enthusiasm.
+## Author: Refaim
+## Version: 1.0
+## SavedVariables: FriendOTronDatabase
+
+src\Environment.lua
+src\Database.lua
+src\locale\enUS.lua
+src\locale\deDE.lua
+src\locale\esES.lua
+src\locale\frFR.lua
+src\locale\koKR.lua
+src\locale\ptBR.lua
+src\locale\ruRU.lua
+src\locale\zhCN.lua
+src\locale\zhTW.lua
+src\LibFriendship.lua
+src\Selector.lua
+src\Addon.lua
