@@ -22,4 +22,5 @@ LOCALE_STRINGS = {
     save_multiple_friends_message_template_1 = "¡INICIANDO CATÁLOGO SOCIAL MASIVO! Procesando %d unidades de amistad... (Memoria volátil temblando)",
     save_multiple_friends_message_template_2 = "¡PRUEBA BETA IMPORTACIÓN MASIVA DE AMIGOS! Hidratando %d vínculos sociales... (Integridad del sistema: [CALCULANDO])",
     save_multiple_friends_message_template_3 = "¡COMPRESIÓN DE AMIGOS GRADO GNOMO ACTIVADA! Exprimiendo %d colegas en base de datos inestable... (Escudos al 12%%)",
+    friend_list_full_message = "¡DESBORDAMIENTO DE CAPACIDAD SOCIAL! No se pudo asimilar nuevo contacto. (Recomendación: Purgar 20%% de amigos existentes o actualizar a licencia premium de amistad)",
 }

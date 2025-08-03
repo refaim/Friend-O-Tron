@@ -19,6 +19,7 @@ setfenv(1, FriendOTron)
 ---@field save_multiple_friends_message_template_1 string
 ---@field save_multiple_friends_message_template_2 string
 ---@field save_multiple_friends_message_template_3 string
+---@field friend_list_full_message string
 
 LOCALE_STRINGS = {
     add_friend_message_template_1 = "ASSIMILATED %s INTO COLLECTIVE! (Friendship efficiency +12.7%%)",
@@ -39,4 +40,5 @@ LOCALE_STRINGS = {
     save_multiple_friends_message_template_1 = "INITIATING MASS SOCIAL CATALOG! Processing %d friendship units... (Volatile memory quivering)",
     save_multiple_friends_message_template_2 = "BETA-TESTING FRIEND BULK IMPORT! Hydrating %d social bonds... (System integrity: [CALCULATING])",
     save_multiple_friends_message_template_3 = "GNOME-GRADE FRIEND COMPRESSION ENGAGED! Squeezing %d pals into unstable database... (Shields at 12%%)",
+    friend_list_full_message = "SOCIAL CAPACITY OVERFLOW! Could not assimilate new contact. (Recommendation: Purge 20% of existing friends or upgrade to premium friendship license)",
 }

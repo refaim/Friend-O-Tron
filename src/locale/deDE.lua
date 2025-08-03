@@ -22,4 +22,5 @@ LOCALE_STRINGS = {
     save_multiple_friends_message_template_1 = "MASSEN-SOZIALKATALOG INITIIERT! Verarbeite %d Freundschaftseinheiten... (Flüchtiger Speicher zittert)",
     save_multiple_friends_message_template_2 = "BETA-TEST FREUND-MASSENIMPORT! Hydratisiere %d soziale Bindungen... (Systemintegrität: [BERECHNET])",
     save_multiple_friends_message_template_3 = "GNOMISCHE FREUND-KOMPRESSION AKTIVIERT! Presse %d Kumpels in instabile Datenbank... (Schilde bei 12%%)",
+    friend_list_full_message = "SOZIALE KAPAZITÄT ÜBERLASTET! Neuer Kontakt konnte nicht assimiliert werden. (Empfehlung: 20%% bestehender Freunde löschen oder auf Premium-Freundschaftslizenz upgraden)",
 }

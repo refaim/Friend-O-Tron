@@ -56,22 +56,28 @@ local function syncFriends()
     end
 end
 
+local EventType = LibFriendship.enums.EventType
+local wasListFullWarningEmitted = false
+
 LibFriendship:RegisterEvents(function(event)
     local wasRequestedByFriendOTron = friendsToSync[event.friendName] == true
     friendsToSync[event.friendName] = nil
 
-    if event.type == LibFriendship.enums.EventType.Added then
+    if event.type == EventType.Added then
         if wasRequestedByFriendOTron then
             echoMessage(format(messageSelector:Select("add-friend"), event.friendName))
         else
             db:AddEvent("add", event.friendName)
         end
-    elseif event.type == LibFriendship.enums.EventType.Removed then
+    elseif event.type == EventType.Removed then
         if wasRequestedByFriendOTron then
             echoMessage(format(messageSelector:Select("remove-friend"), event.friendName))
         else
             db:AddEvent("remove", event.friendName)
         end
+    elseif event.type == EventType.ListFull and not wasListFullWarningEmitted then
+        wasListFullWarningEmitted = true
+        echoMessage(LOCALE_STRINGS.friend_list_full_message)
     end
 end)
 

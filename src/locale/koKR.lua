@@ -22,4 +22,5 @@ LOCALE_STRINGS = {
     save_multiple_friends_message_template_1 = "대량 소셜 카탈로그 시작! %d개의 우정 단위 처리 중... (휘발성 메모리 떨림)",
     save_multiple_friends_message_template_2 = "베타 테스트 친구 대량 가져오기! %d개의 사회적 유대 수화 중... (시스템 무결성: [계산 중])",
     save_multiple_friends_message_template_3 = "노움급 친구 압축 활성화! %d명의 친구를 불안정한 데이터베이스에 압축... (실드 12%%)",
+    friend_list_full_message = "사회적 용량 오버플로! 새로운 연락처를 동화할 수 없습니다. (권장 사항: 기존 친구의 20%% 제거 또는 프리미엄 우정 라이선스로 업그레이드)",
 }

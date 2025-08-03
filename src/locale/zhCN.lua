@@ -22,4 +22,5 @@ LOCALE_STRINGS = {
     save_multiple_friends_message_template_1 = "启动大量社交目录！处理%d个友情单位...（易失性内存颤抖）",
     save_multiple_friends_message_template_2 = "测试版朋友批量导入！水合%d个社交纽带...（系统完整性：【计算中】）",
     save_multiple_friends_message_template_3 = "低地精级朋友压缩已启动！将%d个伙伴压入不稳定数据库...（护盾12%%）",
+    friend_list_full_message = "社交容量溢出！无法同化新联系人。（建议：清除现有20%%的朋友或升级至高级友情许可证）",
 }
