@@ -14,6 +14,7 @@ local function syncFriends()
     local gameFriendsSet = {}
     ---@type table<string, true>
     local friendsToSave = {}
+    local friendsToSaveCount = 0
     ---@type table<string, true>
     local friendsToRemove = {}
     for i = 1, GetNumFriends() do
@@ -22,6 +23,7 @@ local function syncFriends()
             local name = --[[---@type string]] nameOrNil
             if dbFriendshipStatusByName[name] == nil then
                 friendsToSave[name] = true
+                friendsToSaveCount = friendsToSaveCount + 1
             elseif dbFriendshipStatusByName[name] == false then
                 friendsToRemove[name] = true
             end
@@ -29,8 +31,8 @@ local function syncFriends()
         end
     end
 
-    if getn(friendsToSave) > 2 then
-        echoMessage(format(messageSelector:Select("save-multiple-friends"), getn(friendsToSave)))
+    if friendsToSaveCount > 2 then
+        echoMessage(format(messageSelector:Select("save-multiple-friends"), friendsToSaveCount))
     else
         for friendName, _ in pairs(friendsToSave) do
             echoMessage(format(messageSelector:Select("save-friend"), friendName))
