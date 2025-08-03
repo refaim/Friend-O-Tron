@@ -1,10 +1,11 @@
 setfenv(1, FriendOTron)
 
--- TODO superwow
-
 ---@type Database
 local db
 local messageSelector = MessageSelector:Construct()
+
+---@type table<string, true>
+local friendsToSync = {}
 
 local function syncFriends()
     local dbFriendshipStatusByName = db:LoadFriends()
@@ -40,25 +41,34 @@ local function syncFriends()
     end
 
     for friendName, _ in pairs(friendsToRemove) do
+        friendsToSync[friendName] = true
         LibFriendship:RemoveFriend(friendName, true)
     end
 
     local playerName, _ = UnitName("player")
     for otherPlayerName, isFriendInDatabase in pairs(dbFriendshipStatusByName) do
         if isFriendInDatabase and gameFriendsSet[otherPlayerName] == nil and otherPlayerName ~= playerName then
+            friendsToSync[otherPlayerName] = true
             LibFriendship:AddFriend(otherPlayerName, true)
         end
     end
 end
 
 LibFriendship:RegisterEvents(function(event)
-    -- TODO handle other types of events
+    local quiet = friendsToSync[event.friendName] ~= true
+    friendsToSync[event.friendName] = nil
+
+    local message
     if event.type == LibFriendship.enums.EventType.Added then
         db:AddEvent("add", event.friendName)
-        echoMessage(format(messageSelector:Select("add-friend"), event.friendName))
+        if not quiet then
+            echoMessage(format(messageSelector:Select("add-friend"), event.friendName))
+        end
     elseif event.type == LibFriendship.enums.EventType.Removed then
         db:AddEvent("remove", event.friendName)
-        echoMessage(format(messageSelector:Select("remove-friend"), event.friendName))
+        if not quiet then
+            echoMessage(format(messageSelector:Select("remove-friend"), event.friendName))
+        end
     end
 end)
 
