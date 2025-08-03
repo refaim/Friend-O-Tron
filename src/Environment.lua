@@ -23,10 +23,26 @@ ADDON_NAME = "Friend-O-Tron"
 ADDON_VERSION = "1.0"
 
 IS_TURTLE_WOW = getglobal("LFT") ~= nil
+HAS_SUPER_WOW = SUPERWOW_VERSION ~= nil or ImportFile ~= nil and ExportFile ~= nil
 
 ---@type LocaleStrings
 LOCALE_STRINGS = --[[---@type LocaleStrings]] {}
 
 function echoMessage(message)
     DEFAULT_CHAT_FRAME:AddMessage(format("%s: %s", ADDON_NAME, message), 0.9, 0.4, 0.6)
+end
+
+---@param strings string[]
+---@param glue string
+---@return string
+function strjoin(strings, glue)
+    local result = ""
+    for _, s in ipairs(strings) do
+        if result == "" then
+            result = s
+        else
+            result = result .. glue .. s
+        end
+    end
+    return result
 end

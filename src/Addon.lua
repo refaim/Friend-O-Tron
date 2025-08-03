@@ -57,19 +57,20 @@ local function syncFriends()
 end
 
 LibFriendship:RegisterEvents(function(event)
-    local quiet = friendsToSync[event.friendName] ~= true
+    local wasRequestedByFriendOTron = friendsToSync[event.friendName] == true
     friendsToSync[event.friendName] = nil
 
-    local message
     if event.type == LibFriendship.enums.EventType.Added then
-        db:AddEvent("add", event.friendName)
-        if not quiet then
+        if wasRequestedByFriendOTron then
             echoMessage(format(messageSelector:Select("add-friend"), event.friendName))
+        else
+            db:AddEvent("add", event.friendName)
         end
     elseif event.type == LibFriendship.enums.EventType.Removed then
-        db:AddEvent("remove", event.friendName)
-        if not quiet then
+        if wasRequestedByFriendOTron then
             echoMessage(format(messageSelector:Select("remove-friend"), event.friendName))
+        else
+            db:AddEvent("remove", event.friendName)
         end
     end
 end)
@@ -77,6 +78,7 @@ end)
 local eventFrame = CreateFrame("Frame", "FriendOTronEventFrame")
 eventFrame:RegisterEvent("ADDON_LOADED")
 eventFrame:RegisterEvent("FRIENDLIST_UPDATE")
+eventFrame:RegisterEvent("PLAYER_LEAVING_WORLD")
 eventFrame:SetScript("OnEvent", function ()
     if event == "ADDON_LOADED" and arg1 == ADDON_NAME then
         eventFrame:UnregisterEvent("ADDON_LOADED")
@@ -84,5 +86,8 @@ eventFrame:SetScript("OnEvent", function ()
     elseif event == "FRIENDLIST_UPDATE" and db ~= nil then
         eventFrame:UnregisterEvent("FRIENDLIST_UPDATE")
         syncFriends()
+    elseif event == "PLAYER_LEAVING_WORLD" and db ~= nil then
+        eventFrame:UnregisterEvent("PLAYER_LEAVING_WORLD")
+        db:SaveFriends()
     end
 end)
