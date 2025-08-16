@@ -1,8 +1,16 @@
 ## Interface: 11200
 ## Title: Friend-O-Tron
 ## Notes: An experimental automated friend-syncing construct! May exhibit catastrophic enthusiasm.
+## Notes-deDE: Ein experimenteller automatisierter Freund-Synchronisations-Konstrukt! Kann katastrophalen Enthusiasmus zeigen.
+## Notes-esES: ¡Un constructo experimental de sincronización automatizada de amigos! Puede mostrar entusiasmo catastrófico.
+## Notes-frFR: Un construct expérimental de synchronisation automatisée d'amis ! Peut faire preuve d'enthousiasme catastrophique.
+## Notes-koKR: 실험적인 자동 친구 동기화 구조물! 재앙적 열정을 보일 수 있습니다.
+## Notes-ptBR: Um constructo experimental de sincronização automática de amigos! Pode exibir entusiasmo catastrófico.
+## Notes-ruRU: Экспериментальная автоматизированная конструкция синхронизации друзей! Может проявлять катастрофический энтузиазм.
+## Notes-zhCN: 一个实验性自动朋友同步构造！可能表现出灾难性热情。
+## Notes-zhTW: 一個實驗性自動朋友同步構造！可能表現出災難性熱情。
 ## Author: Refaim
-## Version: 1.0
+## Version: 1.1
 ## SavedVariables: FriendOTronDatabase, FriendOTronSettings
 
 src\Environment.lua
