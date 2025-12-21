@@ -10,7 +10,7 @@
 ## Notes-zhCN: 一个实验性自动朋友同步构造！可能表现出灾难性热情。
 ## Notes-zhTW: 一個實驗性自動朋友同步構造！可能表現出災難性熱情。
 ## Author: Refaim
-## Version: 1.1
+## Version: 1.2
 ## SavedVariables: FriendOTronDatabase, FriendOTronSettings
 
 src\Environment.lua

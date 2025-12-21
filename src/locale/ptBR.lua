@@ -1,10 +1,6 @@
 setfenv(1, FriendOTron)
 
-local locale = GetLocale()
-if IS_TURTLE_WOW and locale == "xxYY" then
-    locale = "ptBR"
-end
-if locale ~= "ptBR" then return end
+if GetLocale() ~= "ptBR" then return end
 
 ---@type LocaleStrings
 LOCALE_STRINGS = {

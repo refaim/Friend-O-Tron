@@ -20,7 +20,7 @@ FriendOTron = setmetatable({_G = _G}, {__index = _G})
 setfenv(1, FriendOTron)
 
 ADDON_NAME = "Friend-O-Tron"
-ADDON_VERSION = "1.1"
+ADDON_VERSION = "1.2"
 
 IS_TURTLE_WOW = getglobal("TURTLE_WOW_VERSION") ~= nil
 HAS_SUPER_WOW = SUPERWOW_VERSION ~= nil or ImportFile ~= nil and ExportFile ~= nil
