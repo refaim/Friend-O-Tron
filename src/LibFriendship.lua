@@ -96,9 +96,8 @@ local queue = {}
 local jobsInProgress = {}
 
 local function onUpdate()
-    ---@type number[]
-    local jobIndexesToRemove = {}
-    for jobIndex, job in ipairs(jobsInProgress) do
+    for jobIndex = getn(jobsInProgress), 1, -1 do
+        local job = jobsInProgress[jobIndex]
         if time() - job.startedAt >= 3 then
             local isFriend = LibFriendship:IsFriend(job.friendName)
             if job.type == JobType.Add then
@@ -106,11 +105,8 @@ local function onUpdate()
             elseif job.type == JobType.Remove then
                 sendEvent(job.friendName, isFriend == false and EventType.Removed or EventType.UnknownError)
             end
-            tinsert(jobIndexesToRemove, 0, jobIndex)
+            tremove(jobsInProgress, jobIndex)
         end
-    end
-    for _, jobIndex in ipairs(jobIndexesToRemove) do
-        tremove(jobsInProgress, jobIndex)
     end
 
     if next(queue) == nil or next(jobsInProgress) ~= nil then
